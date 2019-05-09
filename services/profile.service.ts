@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, Subscriber } from 'rxjs';
 import { tap, map, filter } from 'rxjs/operators';
 
@@ -16,6 +16,6 @@ export class ProfileService {
   }
 
   getProfileInfo(){
-    return this.http.get(this.api_url + this.userName + "?access_token=" + this.access_token )
+    return this.http.get(this.api_url + this.userName + "?access_token=" + this.access_token );
   }
 }
