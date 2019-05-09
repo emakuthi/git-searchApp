@@ -7,7 +7,15 @@ import { tap, map, filter } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProfileService {
-private api_key:string;
-private api_url:""
-  constructor(private http:HttpClient) { }
+  private userName:string;
+  private access_token:string='fba004364abc60aefdf83f26f4ab5b174c5259ec'
+  private api_url:string='https://api.github.com/users/'
+  constructor(private http:HttpClient) { 
+    console.log("service is ready");
+    this.userName='emakuthi'
+  }
+
+  getProfileInfo(){
+    return this.http.get(this.api_url + this.userName + "?access_token=" + this.access_token )
+  }
 }
