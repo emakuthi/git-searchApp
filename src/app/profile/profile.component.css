@@ -5,9 +5,11 @@
     padding-top: 20px;
 }
 .scroll{
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 200px;
+    
 }
 .card{
     max-height: 1200px;
+    background-color: darkkhaki;
 }
