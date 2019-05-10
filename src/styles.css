@@ -1,3 +1,5 @@
 body {
-    background-image: url("src/assets/logo_transparent.png");
+    background-image: url("src/assets/favicon.png");
+    background-size: auto;
+   
 }

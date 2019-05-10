@@ -2,9 +2,12 @@
     margin-left: 5px;
 }
 .search-form{
-    padding-top: 50px;
+    padding-top: 20px;
 }
 .scroll{
     overflow: scroll;
     max-height: 200px;
+}
+.card{
+    max-height: 1200px;
 }
