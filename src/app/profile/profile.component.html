@@ -1,7 +1,23 @@
 <div *ngIf="profile">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    {{profile.name}} <small>{{profile.login}}</small>
+<div class="card">
+  <div class="card-header">
+    Name: <small>{{profile.name}}</small> username:<small>({{profile.login}})</small> works at {{profile.company}} {{profile.location}}
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="{{profile.avatar_url}}"class="rounded-circle img-fluid" alt="profile_pic">
+      </div>
+      <div class="col-sm-5">
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+          <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+          <li class="list-group-item" *ngIf="profile.created_at">Created at: <small>{{profile.created_at}}</small></li>
+          <li class="list-group-item" *ngIf="profile.html_url">gitHub link: <small>{{profile.html_url}}</small></li>
+          <li class="list-group-item" *ngIf="profile.email">Email Address: <small>{{profile.email}}</small></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 </div>
