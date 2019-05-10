@@ -21,4 +21,8 @@ export class ProfileService {
   getProfileRepos(){
     return this.http.get(this.api_url + this.userName + "/repos?access_token=" + this.access_token );
   }
+  updateProfile(username:string){
+    this.userName=username;
+
+  }
 }
