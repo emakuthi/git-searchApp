@@ -18,4 +18,7 @@ export class ProfileService {
   getProfileInfo(){
     return this.http.get(this.api_url + this.userName + "?access_token=" + this.access_token );
   }
+  getProfileRepos(){
+    return this.http.get(this.api_url + this.userName + "/repos?access_token=" + this.access_token );
+  }
 }
