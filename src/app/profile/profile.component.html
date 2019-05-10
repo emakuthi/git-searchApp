@@ -32,17 +32,20 @@
             <span class="badge badge-secondary">{{profile.public_gists}}&nbsp;public gists</span>
             <span class="badge badge-info">{{profile.public_repos}}&nbsp;repos</span>
           </p>
+          
           <p><a href="{{profile.html_url}}"class="btn btn-success btn-sm"  target="blank">view more detail on gitHub</a></p>
         <div class="card">
           <div class="card-header">
             <h3 class="card-title">Repositories</h3>
-            <div class="card-body"*ngFor="let repo of repos">
+            <div class="scroll">
+            <div class="card-body "*ngFor="let repo of repos">
               <p class="clearfix">
                 {{repo.name}} <a href="{{repo.html_url}}" class="btn btn-sm btn-warning float-right"> view this repo on gitHub</a>
               </p>
               <p *ngIf="repo.description">{{repo.description}}</p>
             </div>
         </div>
+      </div>
         </div>
       </div>
     </div>

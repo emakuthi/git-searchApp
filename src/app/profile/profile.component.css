@@ -4,3 +4,7 @@
 .search-form{
     padding-top: 50px;
 }
+.scroll{
+    overflow: scroll;
+    max-height: 200px;
+}
