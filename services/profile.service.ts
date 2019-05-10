@@ -2,17 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, Subscriber } from 'rxjs';
 import { tap, map, filter } from 'rxjs/operators';
+import{environment} from'../src/environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
   private userName:string;
-  private access_token:string='fba004364abc60aefdf83f26f4ab5b174c5259ec'
-  private api_url:string='https://api.github.com/users/'
+  private access_token:string = environment.ACCESS_TOKEN;
+  private api_url:string = environment.API_URL;
   constructor(private http:HttpClient) { 
     console.log("service is ready");
-    this.userName='emakuthi'
+    this.userName=' emakuthi'
   }
 
   getProfileInfo(){
