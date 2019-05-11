@@ -2,7 +2,7 @@
     margin-left: 5px;
 }
 .search-form{
-    padding-top: 20px;
+    padding-top: 3px;
 }
 .scroll{
     overflow-y: scroll;
@@ -11,5 +11,19 @@
 }
 .card{
     max-height: 1200px;
-    background-color: darkkhaki;
+    background: radial-gradient(circle, rgba(238,174,202,1) 17%, rgba(148,187,233,1) 100%);
+    
 }
+#search-btn{
+   
+    float: none;
+}
+.list-group ul  {
+   list-style-type: none;
+}
+.card-body{
+    max-height: 300px;
+}
+.form-group{
+    display: flex;
+  }

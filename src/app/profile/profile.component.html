@@ -1,54 +1,68 @@
 <form action="" class="search-form">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="search github users with username" [(ngModel)]="username" name="userName" (keyup)="findProfile()">
-
+    <input type="text" class="form-control" placeholder="search github users with username" [(ngModel)]="username" name="userName" >
+    <button class="btn btn-secondary btn-sm" id="search-btn"type="submit"  (click)="findProfile()" ng-hide="app.component.html." ><i class="fa fa-search"></i></button>
   </div>
 </form>
+
 <div *ngIf="profile">
 <div class="card">
   <div class="card-header">
-    Name:&nbsp; <small>{{profile.name}}</small> username:&nbsp;<small>({{profile.login}})</small> works at {{profile.company}}&nbsp;&nbsp; {{profile.location}}
+    <h4>{{profile.name}}</h4>
   </div>
-  <div class="card-body">
+  <div class="card-body ">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-2">
         <img src="{{profile.avatar_url}}"class="rounded-circle img-fluid" alt="profile_pic">
       </div>
-      <div class="col-sm-5">
-        <ul class="list-group">
-          <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+      <div class="col-sm-10">
+          <div class="badges">
+              <p>
+                <span class="badge badge-success">{{profile.followers}}&nbsp;followers</span>
+                <span class="badge badge-primary">following&nbsp;{{profile.following}}</span>
+                <span class="badge badge-secondary">{{profile.public_gists}}&nbsp;public gists</span>
+                <span class="badge badge-info">{{profile.public_repos}}&nbsp;repos</span>
+                <span><a href="{{profile.html_url}}"class="btn btn-success btn-sm"  target="blank">view more detail on gitHub</a></span>
+              </p>  
+            </div>
+        <ul class="list-group scroll">
+          <li class="list-group-item " *ngIf="profile.bio">USERNAME:&nbsp;{{profile.login}}</li>
+          <li class="list-group-item" *ngIf="profile.bio">COMPANY:&nbsp;{{profile.company}}</li>
+          <li class="list-group-item" *ngIf="profile.bio">BIOGRAPHY:&nbsp;{{profile.bio}}</li>
+          <li class="list-group-item" *ngIf="profile.bio">LOCATION:&nbsp;{{profile.location}}</li>
           <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
-          <li class="list-group-item" *ngIf="profile.created_at">Created at: <small>{{profile.created_at}}</small></li>
-          <li class="list-group-item" *ngIf="profile.html_url">gitHub link: <small>{{profile.html_url}}</small></li>
-          <li class="list-group-item" *ngIf="profile.email">Email Address:  <small>{{profile.email}}</small></li>
-          <li class="list-group-item" *ngIf="profile.blog">Company webpage: <small>{{profile.blog}}</small></li>
+          <li class="list-group-item" *ngIf="profile.created_at">CREATED AT:&nbsp;{{profile.created_at}}</li>
+          <li class="list-group-item" *ngIf="profile.html_url">GITHUB LINK:&nbsp; {{profile.html_url}}</li>
+          <li class="list-group-item" *ngIf="profile.email">EMAIL:&nbsp; {{profile.email}}</li>
+          <li class="list-group-item" *ngIf="profile.blog">WEBSITE:&nbsp; {{profile.blog}}</li>
         </ul>
       </div>
-      <div class="col-sm-4">
-        <div class="badges">
-          <p>
-            <span class="badge badge-success">{{profile.followers}}&nbsp;followers</span>
-            <span class="badge badge-primary">following&nbsp;{{profile.following}}</span>
-            <span class="badge badge-secondary">{{profile.public_gists}}&nbsp;public gists</span>
-            <span class="badge badge-info">{{profile.public_repos}}&nbsp;repos</span>
-          </p>
-          
-          <p><a href="{{profile.html_url}}"class="btn btn-success btn-sm"  target="blank">view more detail on gitHub</a></p>
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Repositories</h3>
-            <div class="scroll">
-            <div class="card-body "*ngFor="let repo of repos">
-              <p class="clearfix">
-                {{repo.name}} <a href="{{repo.html_url}}" class="btn btn-sm btn-warning float-right"> view this repo on gitHub</a>
-              </p>
-              <p *ngIf="repo.description">{{repo.description}}</p>
-            </div>
-        </div>
-      </div>
-        </div>
-      </div>
-    </div>
   </div>
-</div>
+  </div>
+  <div class="card-footer">
+      <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Repositories</h4>
+              </div>
+                <div class="scroll">
+                  <div class="card-body "*ngFor="let repo of repos">
+                    <p class="clearfix">
+                      {{repo.name}} <a href="{{repo.html_url}}" class="btn btn-sm btn-warning float-right"> view this repo on gitHub</a>
+                    </p>
+                    <p *ngIf="repo.description">{{repo.description}}</p>
+                    <div class="badge">
+                        <p>
+                            <span class="badge badge-success">{{repo.forks}}&nbsp;forks</span>
+                            <span class="badge badge-secondary">{{repo.watchers}}&nbsp;watchers</span>
+                        </p>   
+                    </div>
+                    <hr>
+                  </div>
+                </div>           
+            </div>
+          </div>
+        </div>
+  </div>
 </div>

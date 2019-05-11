@@ -1,5 +1,18 @@
-.container{
-    background-image: url('./../assets/background.jpeg');
-    min-height: 1500px;
+.main{
+    /* background-image: url('./../assets/gitappalog.png'); */
+    background-color: cadetblue;
+    height: 800px;
+    margin: 5px;
+    padding: 20px 20px;
+    /* background-position-x: 300px;
+    background-position-y: 40px;
+    background-repeat: no-repeat;
+    background-size: contain; */
+    align-content: center;
+    position: relative;
+    min-height: 100% !important;
     
+}
+img{
+    margin-left: 30%;
 }

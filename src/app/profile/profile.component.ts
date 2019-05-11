@@ -19,6 +19,7 @@ export class ProfileComponent implements OnInit {
     this.profileService.getProfileInfo().subscribe(profile => {
       console.log(profile);
       this.profile = profile;
+      this.username="";
 
     });
     this.profileService.getProfileRepos().subscribe(repos => {

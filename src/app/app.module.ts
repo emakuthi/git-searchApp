@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService} from '../../services/profile.service';
-import { NavComponent } from './nav/nav.component'
+import { NavComponent } from './nav/nav.component';
+import { ShowLogoDirective } from './directives/show-logo.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     NavComponent,
+    ShowLogoDirective,
     
 
   ],
