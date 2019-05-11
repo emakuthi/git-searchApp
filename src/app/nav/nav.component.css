@@ -5,12 +5,11 @@
     width: 100%;
     background: linear-gradient(158deg, rgba(40,30,59,0.6671043417366946) 0%, rgba(148,187,233,1) 93%);
     overflow: auto;
-    height: 80px;
+    /* height: 80px; */
+    border-radius: 10px;
   }
   
   .menu a {
-    float: right;
-    /* display: flex; */
     padding: 12px;
     color: white;
     text-decoration: none;
@@ -31,3 +30,6 @@
       display: block;
     }
   }
+ .menu{
+   float: right;
+ }

@@ -15,7 +15,7 @@
     
 }
 #search-btn{
-    margin-top: 10px;
+   
     float: none;
 }
 .list-group ul  {
@@ -24,3 +24,6 @@
 .card-body{
     max-height: 300px;
 }
+.form-group{
+    display: flex;
+  }
