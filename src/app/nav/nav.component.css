@@ -1,21 +1,23 @@
-.container span{
+.navbar h4{
     color:white;
 }
 .navbar {
     width: 100%;
-    background-color: #000;
+    background: linear-gradient(158deg, rgba(40,30,59,0.6671043417366946) 0%, rgba(148,187,233,1) 93%);
     overflow: auto;
+    height: 80px;
   }
   
-  .navbar a {
-    float: left;
+  .menu a {
+    float: right;
+    /* display: flex; */
     padding: 12px;
     color: white;
     text-decoration: none;
     font-size: 17px;
   }
   
-  .navbar a:hover {
+  .menu a:hover {
     background-color: #4CAF50;
   }
   
@@ -24,7 +26,7 @@
   }
   
   @media screen and (max-width: 500px) {
-    .navbar a {
+    .menu a {
       float: none;
       display: block;
     }

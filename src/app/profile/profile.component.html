@@ -1,15 +1,15 @@
-<!-- <form action="" class="search-form">
+<form action="" class="search-form">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="search github users with username" [(ngModel)]="username" name="userName" >
-    <button class="btn btn-success btn-md" id="search-btn"type="submit"  (click)="findProfile()" >search&nbsp;<i class="fa fa-search"></i></button>
+    <button class="btn btn-success btn-sm" id="search-btn"type="submit"  (click)="findProfile()" >search&nbsp;<i class="fa fa-search"></i></button>
+  </div>
+</form>
+<!-- <form action="">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search gitHub user" aria-label="" aria-describedby="" [(ngModel)]="username" >
+    <button class="btn btn-primary" type="submit" id="button-addon2" (click)="findProfile()"><i class="fa fa-search"></i></button> 
   </div>
 </form> -->
-<form action="">
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Search gitHub user" aria-label="" aria-describedby="">
-      <button class="btn btn-primary" type="submit" id="button-addon2" (click)="findProfile()"><i class="fa fa-search"></i></button> 
-</div>
-</form>
 <div *ngIf="profile">
 <div class="card">
   <div class="card-header">
