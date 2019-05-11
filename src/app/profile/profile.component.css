@@ -17,3 +17,9 @@
     margin-top: 10px;
     float: right;
 }
+.list-group ul  {
+   list-style-type: none;
+}
+.card-body{
+    max-height: 300px;
+}

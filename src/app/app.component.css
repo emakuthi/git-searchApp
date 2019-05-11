@@ -1,5 +1,5 @@
 .container{
     background-image: url('./../assets/background.jpeg');
-    min-height: 1500px;
+    max-height: 1500px;
     
 }
