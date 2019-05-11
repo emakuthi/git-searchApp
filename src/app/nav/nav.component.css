@@ -3,7 +3,7 @@
 }
 .navbar {
     width: 100%;
-    background-color: #555;
+    background-color: #000;
     overflow: auto;
   }
   
@@ -16,11 +16,11 @@
   }
   
   .navbar a:hover {
-    background-color: #000;
+    background-color: #4CAF50;
   }
   
   .active {
-    background-color: #4CAF50;
+    background-color: blue;
   }
   
   @media screen and (max-width: 500px) {

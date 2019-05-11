@@ -1,13 +1,16 @@
 <form action="" class="search-form">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="search github users with username" [(ngModel)]="username" name="userName" (keyup)="findProfile()">
-
+    <input type="text" class="form-control" placeholder="search github users with username" [(ngModel)]="username" name="userName" >
+    <button class="btn btn-success btn-lg" id="search-btn"type="submit"  (click)="findProfile()" >search<i class="fa fa-search"></i></button>
   </div>
 </form>
+
+
+
 <div *ngIf="profile">
 <div class="card">
   <div class="card-header">
-    Name:&nbsp; <small>{{profile.name}}</small> username:&nbsp;<small>({{profile.login}})</small> works at {{profile.company}}&nbsp;&nbsp; {{profile.location}}
+    Name:&nbsp; <small>{{profile.name}}</small> username:&nbsp;<small>({{profile.login}})</small > works at {{profile.company}}&nbsp;&nbsp; {{profile.location}}
   </div>
   <div class="card-body">
     <div class="row">

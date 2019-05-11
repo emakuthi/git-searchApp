@@ -13,3 +13,7 @@
     max-height: 1200px;
     background-color: darkkhaki;
 }
+#search-btn{
+    margin-top: 10px;
+    float: right;
+}
