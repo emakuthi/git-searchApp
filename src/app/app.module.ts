@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService} from '../../services/profile.service';
 import { NavComponent } from './nav/nav.component';
+import { TextstyleDirective } from './textstyle.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     NavComponent,
+    TextstyleDirective,
   ],
   imports: [
     BrowserModule,

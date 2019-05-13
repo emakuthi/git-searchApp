@@ -6,9 +6,10 @@
 </form>
 
 <div *ngIf="profile">
-<div class="card">
-  <div class="card-header">
-    <h4>{{profile.name}}</h4>
+
+<div class="card" >
+  <div appTextstyle class="card-header">
+    <h4 >{{profile.name}}</h4>
   </div>
   <div class="card-body ">
     <div class="row">
@@ -43,9 +44,19 @@
       <div class="row">
           <div class="col-md-12">
             <div class="card">
-              <div class="card-header">
+              <div *ngIf="profile.public_repos>30; else max"   class="card-header">
                 <h4 class="card-title">Repositories</h4>
               </div>
+              <ng-template #min>
+                  <div class="card-header">
+                      <h4 class="card-title">Repositories</h4>
+                  </div>
+              </ng-template>
+              <ng-template #max>
+                <div appTextstyle  class="card-header">
+                    <h4 class="card-title">Repositories</h4>
+                </div>
+              </ng-template>
                 <div class="scroll">
                   <div class="card-body "*ngFor="let repo of repos">
                     <p class="clearfix">
@@ -66,3 +77,4 @@
         </div>
   </div>
 </div>
+
