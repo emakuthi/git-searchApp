@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileService} from '../../services/profile.service';
 import { NavComponent } from './nav/nav.component';
 import { TextstyleDirective } from './textstyle.directive';
+import { TextcolorPipe } from './textcolor.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TextstyleDirective } from './textstyle.directive';
     ProfileComponent,
     NavComponent,
     TextstyleDirective,
+    TextcolorPipe,
   ],
   imports: [
     BrowserModule,
